@@ -1,0 +1,210 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <title></title>
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>HTML Documentation</header>
+    <ul>
+      <li>
+        <a class="nav-link" href="#introduction">Introduction</a>         </li>
+      <li>
+        <a class="nav-link" href="#elements">Elements</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#block_versus_inline_elements">Block versus inline elements</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#attributes">Attributes</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#anatomy_of_an_HTML_document">Anatomy of an HTML document</a> </li>
+      <li>
+        <a class="nav-link" href="#whitespace_in_HTML">Whitespace in HTML</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#special_characters_in_html">Special characters in HTML</a> </li>
+      <li>
+        <a class="nav-link" href="#html_comments">HTML comments</a> </li>
+      <li>
+        <a class="nav-link" href="#lists">Lists</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#emphasis_and_importance">Emphasis and importance</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#hyperlinks">Hyperlinks</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#reference">Reference</a>
+      </li>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header>Introduction</header>
+      <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior
+        (JavaScript).
+      </p>
+      <p>"Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people,
+        you become an active participant in the World Wide Web.</p>
+      <p>HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>,
+        <code>&lt;section&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;nav&gt;</code>, and many others.</p>
+      <p>An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "<code>&lt;</code>"" and "<code>&gt;</code>". The name of an element inside a tag is case insensitive. That is, it can be written
+        in uppercase, lowercase, or a mixture. For example, the <code>&lt;title&gt;</code> tag can be written as <code>&lt;Title&gt;</code>, <code>&lt;TITLE&gt;</code>, or in any other way.</p>
+    </section>
+    <section class="main-section" id="elements">
+      <header>Elements</header>
+      <p>The main parts of our element are:
+        <p>
+          <ol>
+            <li>The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the start of the paragraph is.</li>
+            <li>The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is
+              a common beginner error and can lead to strange results.</li>
+            <li>The content: This is the content of the element, which in this case is just text.</li>
+            <li>The element: The opening tag plus the closing tag plus the content equals the element.</li>
+          </ol>
+    </section>
+    <section class="main-section" id="block_versus_inline_elements">
+      <header>Block versus inline elements</header>
+      <p>There are two important categories of elements in HTML which you should know about. They are block-level elements and inline elements.</p>
+      <ul>
+        <li>Block-level elements form a visible block on a page — they will appear on a new line from whatever content went before it, and any content that goes after it will also appear on a new line. Block-level elements tend to be structural elements on
+          the page that represent, for example, paragraphs, lists, navigation menus, footers, etc. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.</li>
+        <li>Inline elements are those that are contained within block-level elements and surround only small parts of the document’s content, not entire paragraphs and groupings of content. An inline element will not cause a new line to appear in the document;
+          they would normally appear inside a paragraph of text, for example an <code>&lt;a&gt;</code> element (hyperlink) or emphasis elements such as <code>&lt;em&gt;</code> or <code>&lt;strong&gt;</code>.</li>
+    </section>
+    <section class="main-section" id="attributes">
+      <header>Attributes</header>
+      <p>Attributes contain extra information about the element which you don't want to appear in the actual content. In this case, the class attribute allows you to give the element an identifying name that can be later used to target the element with style
+        information and other things.</p>
+      <p>An attribute should have:</p>
+      <ol>
+        <li>A space between it and the element name (or the previous attribute, if the element already has one or more attributes).</li>
+        <li>The attribute name, followed by an equal sign.</li>
+        <li>An attribute value, with opening and closing quote marks wrapped around it.</li>
+      </ol>
+    </section>
+    <section class="main-section" id="anatomy_of_an_HTML_document">
+      <header>Anatomy of an HTML document</header>
+      <p>Now we'll look at how individual elements are combined to form an entire HTML page:</p>
+      <p><code>&lt;!DOCTYPE html&gt;</code><br><code>&lthtml&gt;</code><br><code>&lt;head&gt;</code><br><code>&lt;meta charset="utf-8"&gt;</code><br><code>&lt;title&gt;My test page&lt;/title&gt;</code><br><code>&lt;head&gt;</code><br><code>&lt;body&gt;</code><br><code>&lt;p&gt;This is my page&lt;/p&gt;</code><br><code>&lt;/body&gt;</code><br><code>&lt;/html&gt;</code></p>
+      <p>Here we have:</p>
+      <ol>
+        <li><code>&lt;DOCTYPE html&gt;</code>: The doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic
+          error checking and other useful things. However, these days no one really cares about them, and they are really just a historical artifact that needs to be included for everything to work right. <code>&lt;!DOCTYPE html&gt;</code> is the shortest
+          string of characters that counts as a valid doctype; that's all you really need to know.
+          <li><code>&lt;html&gt;&lt;/html&gt;</code>: The <code>&lt;html&gt;</code> element. This element wraps all the content on the entire page, and is sometimes known as the root element.</li>
+          <li><code>&lt;head&gt;&lt;/head&gt;</code>: The <code>&lt;head&gt;</code> element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes
+            things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more. You'll learn more about this in the next article in the series.</li>
+          <li><code>&lt;meta charset="utf-8"&gt;</code>: This element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of human written languages. Essentially it can now handle any textual content
+            you might put on it. There is no reason not to set this, and it can help avoid some problems later.</li>
+          <li><code>&lt;title&gt;&lt;/title&gt;</code>: The <code>&lt;title&gt;</code> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in, and is used to describe the page when you bookmark/favorite
+            it.
+          </li>
+          <li><code>&lt;body&gt;&lt;/body&gt;</code>: The <code>&lt;body&gt;</code> element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or
+            whatever else.</li>
+      </ol>
+    </section>
+    <section class="main-section" id="whitespace_in_HTML">
+      <header>Whitespace in HTML</header>
+      <p>No matter how much whitespace you use (which can include space characters, but also line breaks), the HTML parser reduces each one down to a single space when rendering the code. So why use so much whitespace? The answer is readability — it is so
+        much easier to understand what is going on in your code if you have it nicely formatted, and not just bunched up together in a big mess. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It
+        is up to you what style of formatting you use (how many spaces for each level of indentation, for example), but you should consider formatting it.</p>
+    </section>
+    <section class="main-section" id="special_characters_in_html">
+      <header>Special characters in HTML</header>
+      <p>In HTML, the characters <code>&lt;</code>, <code>&gt;</code>,<code>"</code>,<code>'</code> and <code>&</code> are special characters. They are parts of the HTML syntax itself, so how do you include one of these characters in your text, for example if you really want to use an ampersand or less-than sign, and not have it interpreted as code as some browsers may do?</p>
+      <p>We have to use character references — special codes that represent characters, and can be used in these exact circumstances. Each character reference is started with an ampersand (&), and ended by a semicolon (;).</p>
+      <ul>
+        <li>
+          <xmp>< --> &lt;</xmp>
+        </li>
+        <li>
+          <xmp>> --> &gt;</xmp>
+        </li>
+        <li>
+          <xmp>" --> &quot;</xmp>
+        </li>
+        <li>
+          <xmp>; --> apos;</xmp>
+        </li>
+        <li>
+          <xmp>& --> &amp;</xmp>
+        </li>
+      </ul>
+    </section>
+    <section class="main-section" id="html_comments">
+      <header>HTML comments</header>
+      <p>In HTML, as with most programming languages, there is a mechanism available to write comments in the code — comments are ignored by the browser and invisible to the user, and their purpose is to allow you to include comments in the code to say how
+        your code works, what the different parts of the code do, etc. This can be very useful if you return to a code base that you've not worked on for six months, and can't remember what you did — or if you hand your code over to someone else to work
+        on.
+      </p>
+      <p>To turn a section of content inside your HTML file into a comment, you need to wrap it in the special markers <code>&lt;!--</code>and <code>--&gt;</code>, for example:
+        <p><code>&lt;p&gt;I'm not inside a comment&lt;/p&gt;</code><br><code>&lt;!-- &lt;p&gt;I am!&lt;/p&gt; --&gt;</code></p>
+    </section>
+    <section class="main-section" id="lists">
+      <header>Lists</header>
+      <p>Now let's turn our attention to lists. Lists are everywhere in life — from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials!
+        Lists are everywhere on the Web too, and we've got three different types to worry about.</p>
+      <h2>Unordered</h2>
+      <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter — let's take a shopping list as an example.</p>
+      <p>Every unordered list starts off with a <code>&lt;ul&gt;</code> element — this wraps around all the list items. Each list item is wrapped in a <code>&lt;li&gt;</code> element.</p>
+      <p><code>&lt;ul&gt;</code><br>
+        <code>&lt;li&gt;milk&lt;/li&gt;</code><br>
+        <code>&lt;li&gt;eggs&lt;/li&gt;</code><br>
+        <code>&lt;li&gt;bread&lt;/li&gt;</code><br>
+        <code>&lt;li&gt;cheese&lt;/li&gt;</code><br>
+        <code>&lt;/ul&gt;</code>
+      </p>
+      <h2>Ordered</h2>
+      <p>Ordered lists are lists in which the order of the items does matter — let's take a set of directions as an example.</p>
+      <p>The markup structure is the same as for unordered lists, except that you have to wrap the list items in an <code>&lt;ol&gt;</code> element, rather than <code>&lt;ul&gt;</code>:</p>
+      <p><code>&lt;ol&gt;</code><br>
+        <code>&lt;li&gt;Drive to the end of the road&lt;/li&gt;</code><br>
+        <code>&lt;li&gt;Turn right&lt;/li&gt;</code><br>
+        <code>&lt;li&gt;Go straight across the first two roundabouts&lt;/li&gt;</code><br>
+        <code>&lt;li&gt;Turn left at the third roundabout&lt;/li&gt;</code><br>
+        <code>&lt;li&gt;The school is on your right, 300 meters up the road&lt;/li&gt;</code><br>
+        <code>&lt;/ol&gt;</code>
+      </p>
+    </section>
+    <section class="main-section" id="emphasis_and_importance">
+      <header>Emphasis and importance</header>
+      <p>In human language, we often emphasise certain words to alter the meaning of a sentence, and we often want to mark certain words as important or different in some way. HTML provides various semantic elements to allow us to mark up textual content
+        with such effects, and in this section, we'll look at a few of the most common ones.</p>
+      <h2>Emphasis</h2>
+      <p>When we want to add emphasis in spoken language, we stress certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics. For example, the following two sentences
+        have different meanings.<br><br> I am glad you weren't late.<br><br> I am glad you weren't late.<br><br> The first sentence sounds genuinely relieved that the person wasn't late. In contrast, the second one sounds sarcastic or passive-aggressive,
+        expressing annoyance that the person arrived a bit late.<br><br> In HTML we use the <code>&lt;em&gt;</code> (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognised by screen readers
+        and spoken out in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling.</p>
+      <h2>Strong importance</h2>
+      <p>To emphasize important words, we tend to stress them in spoken language and bold them in written language. For example:<br><br> This liquid is highly toxic.<br><br> I am counting on you. Do not be late!<br><br> In HTML we use the <code>&lt;strong&gt;</code>        (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers and spoken in a different tone of voice. Browsers style this as bold text by default, but you shouldn't
+        use this tag purely to get bold styling. </p>
+    </section>
+    <section class="main-section" id="hyperlinks">
+      <header>Hyperlinks</header>
+      <h2>What is a hyperlink?</h2>
+      <p>Hyperlinks are one of the most exciting innovations the Web has to offer. Well, they've been a feature of the Web since the very beginning, but they are what makes the Web a Web — they allow us to link our documents to any other document (or other
+        resource) we want to, we can also link to specific parts of documents, and we can make apps available at a simple web address (contrast this to native apps, which have to be installed and all that business.) Just about any web content can be converted
+        to a link, so that when clicked (or otherwise activated) it will make the web browser go to another web address (URL).</p>
+      <p>A basic link is created by wrapping the text (or other content, see Block level links) you want to turn into a link inside an <code>&lt;a&gt;</code> element, and giving it an <code>href</code> attribute (also known as a Hypertext Reference , or
+        target) that will contain the web address you want the link to point to.</p>
+      <p><code>&lt;p&gt;I'm creating a link to<br>
+          &lt;a href="https://www.mozzile.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.<br>
+          &lt;/p&gt;</code></p>
+      <p>This gives us the following result:<br> I'm creating a link to <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.</p>
+    </section>
+    <section class="main-section" id="reference">
+      <header>Reference</header>
+      <ul>
+        <li>All the documentation on this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN</a>
+    </section>
+  </main>
+</body>
+</html>
